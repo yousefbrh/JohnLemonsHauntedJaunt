@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Yousef\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Yousef\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_New Unity Project.-875242482.00" t="ExcludeRecursive" />
+    <e p="C:\Workspace\Trainee\Unity\John Lemon's Haunted Jaunt\New Unity Project" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="3DBeginner_Third-PartyNotice.txt" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="LightFlicker.cs" t="Include" />
+          <e p="PlayerMovement.cs" t="Include" />
+        </e>
+        <e p="Shaders" t="Include">
+          <e p="PlaneFog.shader" t="Include" />
+          <e p="SpookyStandardShader.shader" t="Include" />
+          <e p="ToonShader.shader" t="Include" />
+        </e>
+        <e p="TutorialInfo" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="Editor" t="Include">
+              <e p="ReadmeEditor.cs" t="Include" />
+            </e>
+            <e p="Readme.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="New Unity Project.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
