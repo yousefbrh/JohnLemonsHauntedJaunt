@@ -1,17 +1,22 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class PlayerMovement : MonoBehaviour
 {
     public float turnSpeed = 20f;
-    public float jumpVelocity;
-    
+    public float jumpVelocity = 5f;
+    public bool grounded = true;
+
     Animator m_Animator;
     Rigidbody m_Rigidbody;
     Vector3 m_Movement;
     Quaternion m_Rotation = Quaternion.identity;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -45,5 +50,15 @@ public class PlayerMovement : MonoBehaviour
     {
         m_Rigidbody.MovePosition (m_Rigidbody.position + m_Movement * m_Animator.deltaPosition.magnitude);
         m_Rigidbody.MoveRotation (m_Rotation);
+    }
+
+    private void OnCollisionStay(Collision other)
+    {
+        grounded = true;
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        grounded = false;
     }
 }

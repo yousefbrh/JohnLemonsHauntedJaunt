@@ -9,9 +9,12 @@ public class GameEnding : MonoBehaviour
     public float displayImageDuration = 1f;
     public GameObject player;
     public CanvasGroup exitBackgroundImageCanvasGroup;
-    
     bool m_IsPlayerAtExit;
     float m_Timer;
+    [SerializeField]
+    private GameObject fuck;
+    
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject == player)
