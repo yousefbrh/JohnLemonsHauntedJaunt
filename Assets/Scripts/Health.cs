@@ -1,12 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Health : MonoBehaviour
 {
     Rigidbody m_Rigidbody;
-    private PlayerMovement m_playerMovement;
-    private bool hasJumped;
+    private bool _dangerousFall;
+    
     private float damage;
     public float healthBar = 2000;
     public float fallDamage;
@@ -14,27 +15,29 @@ public class Health : MonoBehaviour
     void Start()
     {
         m_Rigidbody = GetComponent<Rigidbody>();
-        m_playerMovement = GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!m_playerMovement.grounded && m_Rigidbody.velocity.y < -7 )
+        if (m_Rigidbody.velocity.y < -7 )
         {
             damage = -(m_Rigidbody.velocity.y * fallDamage);
-            hasJumped = true;
+            _dangerousFall = true;
         }
-        HitGround();
     }
 
     void HitGround()
     {
-        if (m_playerMovement.grounded && hasJumped)
+        if (_dangerousFall)
         {
             healthBar -= damage;
-            Debug.Log("took damage");
-            hasJumped = false;
+            _dangerousFall = false;
         }
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        HitGround();
     }
 }
